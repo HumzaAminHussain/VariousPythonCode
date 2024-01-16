@@ -1,0 +1,40 @@
+import turtle
+shape = turtle.textinput('shape needed','Enter the shape')
+color = turtle.textinput('color needed','Enter a color')
+turtle.fillcolor(color)
+turtle.begin_fill()
+if shape == "square":
+    length = turtle.numinput('length needed','Enter the length')
+    turtle.forward(length)
+    turtle.right(90)
+    turtle.forward(length)
+    turtle.right(90)
+    turtle.forward(length)
+    turtle.right(90)
+    turtle.forward(length)
+elif shape == "circle":
+    radius = turtle.numinput('radius needed','Enter the radius')
+    turtle.circle(radius)
+elif shape == "triangle":
+    length = turtle.numinput('length needed','Enter the length')
+    turtle.forward(length)
+    turtle.left(120)
+    turtle.forward(length)
+    turtle.left(120)
+    turtle.forward(length)
+elif shape == "rectangle":
+    length = turtle.numinput('length needed','Enter the length')
+    turtle.forward(length)
+    turtle.left(90)
+    turtle.forward(length)
+    turtle.forward(length)
+    turtle.left(90)
+    turtle.forward(length)
+    turtle.left(90)
+    turtle.forward(length)
+    turtle.forward(length)
+
+else:
+    turtle.TK.messagebox.showinfo(title="Error", message="Your shape doesn't work")
+turtle.end_fill()
+turtle.done()
